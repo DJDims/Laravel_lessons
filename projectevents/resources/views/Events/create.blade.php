@@ -16,7 +16,7 @@
                     <strong>Error!</strong>
                     <ul>
                         @foreach ($errors->all() as $error)
-                            <li></li>
+                            <li>$error</li>
                         @endforeach
                     </ul>
                 </div>
@@ -25,19 +25,19 @@
                 @csrf
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong></strong>
+                        <strong>Title</strong>
                         <input type="text" name="title" class="form-control" placeholder="Title" />
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong></strong>
+                        <strong>Date event</strong>
                         <input type="date" name="date_event" class="form-control" placeholder="Date event" />
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                        <strong></strong>
+                        <strong>Adress</strong>
                         <input type="text" name="adress" class="form-control" placeholder="Adress" />
                     </div>
                 </div>
