@@ -44,7 +44,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                     <strong>Confirm password</strong>
-                    <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password" />
+                    <input type="password" name="password_confirmation" class="form-control" placehlder="Confirm password" />
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 mb-3">
