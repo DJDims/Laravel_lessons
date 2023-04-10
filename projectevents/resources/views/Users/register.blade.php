@@ -10,6 +10,7 @@
                     {{session()->get('error')}}
                 </div>
             @endif
+            @include('common.errors')
             <p class="login-box-msg">Signup to join out community</p>
             <form action="{{url('register')}}" method="POST">
                 @csrf
@@ -18,7 +19,7 @@
                     <input type="email" class="form-control" name="email" placeholder="Email" required autofocus />
                 </div>
                 <div>
-                    <input type="text" class="form-control" name="name" placeholder="name" required />
+                    <input type="text" class="form-control" name="name" placeholder="Name" required />
                 </div>
                 <div>
                     <input type="password" class="form-control" name="password" placeholder="Password" required />

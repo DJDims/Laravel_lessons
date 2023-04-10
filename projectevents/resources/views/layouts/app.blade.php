@@ -52,6 +52,7 @@
             <div class="menu_section">
               <h3>General</h3>
               <ul class="nav side-menu">
+                @if(Gate::allows('isAdmin') || Gate::allows('isManager'))
                 <li><a><i class="fa fa-home"></i> Events Manage </a>
                   <ul class="nav child_menu">
                     <li><a href="{{ url('/eventlist') }}">Events List</a></li>
@@ -62,11 +63,14 @@
                     <li><a href="{{ url('/registerlist') }}">Registration list</a></li>
                   </ul>
                 </li>
+                @endif
+                @if(Gate::allows('isAdmin'))
                 <li><a><i class="fa fa-users"></i> Users Manage</a>
                   <ul class="nav child_menu">
                     <li><a href="{{ url('/users') }}">Users List</a></li>
                   </ul>
                 </li>
+                @endif
               </ul>
             </div>
           </div>
@@ -96,7 +100,7 @@
                   <img src='{{ asset("components/images/user.png")}}' alt="">{{Auth::user()->name}}
                 </a>
                 <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{url('/profile/'.Auth::user()->id)}}">Profile</a>
+                  <a class="dropdown-item" href="{{url('/edituser/'.Auth::user()->id)}}">Profile</a>
 
                   <a class="dropdown-item" href="{{ url('/logout') }}">
                     <i class="fa fa-sign-out pull-right"></i> Log Out
