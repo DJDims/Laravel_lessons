@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+}
+
+nav {
+    background-color: #2A3F54;
+}
+
+ul li .nav-link {
+    color: white !important;
+}
+
+.dk-right {
+    margin: 0 !important;
+}
+
+.navbar-toggler hr {
+    width: 5vmin;
+    height: 5px;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+}
