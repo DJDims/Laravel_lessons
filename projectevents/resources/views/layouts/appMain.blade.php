@@ -66,13 +66,8 @@
             </nav>
             <!-- Navbar -->
             <!-- Page content -->
-            <div class="container-fluid d-flex justify-content-center">
-                <div class="container-md">
-                    <div class="d-flex flex-row justify-content-around flex-wrap">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
+            @yield('content')
+            
             <!-- Page content -->
             <!-- /footer content -->
         </div>
