@@ -20,3 +20,26 @@ ul li .nav-link {
     background-color: rgb(230, 230, 230);
     border-radius: 5px;
 }
+
+.dk-mx-a {
+    margin: 0 auto;
+    max-width: 50%;
+}
+
+@media (max-width: 1750px){
+    .dk-mx-a {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 1250px){
+    .dk-mx-a {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1050px){
+    .dk-mx-a {
+        max-width: 100%;
+    }
+}

@@ -53,7 +53,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return view('events.detail', compact('event'));
     }
 
     /**

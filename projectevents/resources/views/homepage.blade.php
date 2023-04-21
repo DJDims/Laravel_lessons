@@ -24,20 +24,23 @@
 </div> --}}
 
 <div class="album">
-  <div class="container">
+  <div class="container dk-mx-a">
     <div class="row">
       
+      @foreach ($events as $event)
       <div class="col-md-4">
         <div class="card mx-5 mt-5" style="width: 18rem;">
-          <img src="{{asset('images/Kirbuturg.jpg')}}" class="card-img-top" alt="...">
+          <img src="{{asset('images/'.$event->image)}}" class="card-img-top" alt="...">
           <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <h5 class="card-title">{{$event->title}}</h5>
+            <p class="card-text">{{$event->date_event}}</p>
+            <a href="{{url('show/'.$event->id)}}" class="btn btn-primary">Read more...</a>
           </div>
         </div>
       </div>
+      @endforeach
 
+      
     </div>
   </div>
 </div>

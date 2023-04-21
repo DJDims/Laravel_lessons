@@ -71,6 +71,9 @@
                   </ul>
                 </li>
                 @endif
+                <li>
+                  <a href="/">Go to main</a>
+                </li>
               </ul>
             </div>
           </div>

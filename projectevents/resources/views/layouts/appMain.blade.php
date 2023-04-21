@@ -43,6 +43,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/events">Events</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/dashboard">Admin panel</a>
+                        </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -51,14 +54,14 @@
                     <ul class="navbar-nav mr-auto dk-right">
                         @if(Auth::guest())
                         <li class="nav-item active">
-                            <a class="nav-link" href="/logout">Logout</a>
-                        </li>
-                        @else
-                        <li class="nav-item active">
                             <a class="nav-link" href="/login">Login</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/register">Register</a>
+                        </li>
+                        @else
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/logout">Logout</a>
                         </li>
                         @endif
                     </ul>

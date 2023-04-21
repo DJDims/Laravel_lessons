@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-});
+Route::get('/', [Controller::class, 'main']);
+Route::get('/events', [Controller::class, 'allEvents']);
+Route::get('/show/{event}', [EventController::class, 'show']);
 
 
 
