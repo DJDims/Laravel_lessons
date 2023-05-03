@@ -9,7 +9,7 @@
     <div class="w-50">
         <h4 style="text-align: justify">{{$event->description}}</h4>
     </div>
-    
+    <a href="{{url('/registerEvent/'.$event->id)}}">Register for this event</a>
     <a href="/events" class="mt-4">
         <i class="fa fa-backward"></i> Back to list
     </a>

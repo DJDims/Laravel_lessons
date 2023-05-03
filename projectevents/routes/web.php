@@ -3,6 +3,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [Controller::class, 'main']);
 Route::get('/events', [Controller::class, 'allEvents']);
 Route::get('/show/{event}', [EventController::class, 'show']);
+Route::get('/search', [EventController::class, 'search']);
+
+Route::get('/registerEvent/{event}', [RegisterController::class, 'showRegister']);
+Route::post('/registerEvent/{event}', [RegisterController::class, 'register']);
 
 
 

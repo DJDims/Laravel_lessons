@@ -33,7 +33,7 @@
           <img src="{{asset('images/'.$event->image)}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">{{$event->title}}</h5>
-            <p class="card-text">{{$event->date_event}}</p>
+            <p class="card-text">{{Carbon\Carbon::parse($event->date_event)->format('d.m.Y')}}</p>
             <a href="{{url('show/'.$event->id)}}" class="btn btn-primary">Read more...</a>
           </div>
         </div>

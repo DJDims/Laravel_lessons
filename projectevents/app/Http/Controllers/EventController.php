@@ -97,4 +97,16 @@ class EventController extends Controller
         $event->delete();
         return redirect('/eventlist');
     }
+
+    public function search(Request $request) {
+        $search = $request->search;
+        
+        $events = Event::where('title', 'LIKE', "%".$search."%")
+        ->orWhere('description', 'LIKE', "%".$search."%")
+        ->orWhere('date_event', 'LIKE', "%".$search."%")
+        ->orderBy('date_event', 'asc')
+        ->get();
+
+        return view('homepage', compact('events'));
+    }
 }
